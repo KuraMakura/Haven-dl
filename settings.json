@@ -6,8 +6,8 @@
         "textures": ["1k", "2k", "4k", "8k"],
         "models":   ["1k", "2k", "4k"]
     },
+    "excludedTextures": ["arm", "nor_dx"],
     "textureFormat": "jpg",
     "hdriFormat": "exr",
-    "normalMapStandard": "nor_gl",
     "consoleOutputVerbosity": 2
 }

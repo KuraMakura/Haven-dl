@@ -27,7 +27,8 @@ def downloadAsset(files, name, type, resolutions, path, checkSize):
         elif type == 1 or type == 2: #Texture or Model
             if resNum == 0: downloadFile(path, files["blend"][res]["blend"], type, checkSize)
             for tex in files:
-                try: downloadFile(path + "/textures", files[tex][res][textureFormat], type, checkSize)
+                try:
+                    if tex not in excludedTextures: downloadFile(path + "/textures", files[tex][res][textureFormat], type, checkSize)
                 except KeyError: continue
 
         else: print("ERROR: Unknown asset type {}; Unable to download.".format(type)) #Unknown
@@ -68,9 +69,9 @@ settings = json.load(open("settings.json", "r"))
 skipStorageCheck    = settings["skipStorageCheck"]
 downloadLocation    = settings["downloadLocation"]
 downloadResolutions = settings["downloadResolutions"]
+excludedTextures    = settings["excludedTextures"]
 hdriFormat          = settings["hdriFormat"]
 textureFormat       = settings["textureFormat"]
-normalMapStandard   = settings["normalMapStandard"]
 verbosity           = settings["consoleOutputVerbosity"]
 
 if verbosity >= 1: print("Haven-dl v24.02.18\nPlease consider supporting Poly Haven if you are able to\nhttps://patreon.com/polyhaven/overview\n")
