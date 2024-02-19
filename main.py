@@ -74,7 +74,7 @@ hdriFormat          = settings["hdriFormat"]
 textureFormat       = settings["textureFormat"]
 verbosity           = settings["consoleOutputVerbosity"]
 
-if verbosity >= 1: print("Haven-dl v24.02.18\nPlease consider supporting Poly Haven if you are able to\nhttps://patreon.com/polyhaven/overview\n")
+if verbosity >= 1: print("Haven-dl v24.02.19\nPlease consider supporting Poly Haven if you are able to\nhttps://patreon.com/polyhaven/overview\n")
 
 #Retrieve list of assets
 fullList = requests.get("https://api.polyhaven.com/assets").json()
