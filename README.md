@@ -4,6 +4,8 @@ Python script for downloading everything from Poly Haven
 ----
 
 # Instructions:
+Install Python
+
 Edit [settings.json](settings.json) to fit your needs
 
 Run [main.py](main.py) from command line, or use [run.cmd](run.cmd)
